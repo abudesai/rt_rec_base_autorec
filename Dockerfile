@@ -1,4 +1,4 @@
-FROM python:3.8.0-slim as builder
+FROM tensorflow/tensorflow:2.11.0-gpu
 
 
 RUN apt-get -y update && apt-get install -y --no-install-recommends \
@@ -14,7 +14,7 @@ RUN pip3 install -r requirements.txt
 
 COPY app ./opt/app
 
-WORKDIR /opt/app
+WORKDIR /opt/app 
 
 
 ENV PYTHONUNBUFFERED=TRUE
