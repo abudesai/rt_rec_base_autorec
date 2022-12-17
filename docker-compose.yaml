@@ -1,6 +1,7 @@
 version: "3"
 services:
   algo_app:
+    container_name: rt_rec_base_autorec
     build: .
     volumes:
       - ./../ml_vol:/opt/ml_vol
